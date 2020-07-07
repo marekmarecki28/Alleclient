@@ -1,0 +1,7 @@
+<div *ngFor="let category of categories" (click)="onSelect(category)">
+
+    <h2>{{category.name}}</h2>
+    <div *ngIf="selectedCategory && selectedCategoryName===category.name">
+        <app-category id={{category.id}}></app-category>
+    </div>
+</div>
